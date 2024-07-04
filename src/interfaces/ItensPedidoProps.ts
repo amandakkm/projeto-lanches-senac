@@ -1,6 +1,7 @@
 export interface ItensPedidoProps {
     lanche: string;
     image: string;
-    price: string;
+    price: number;
     total: number;
+    qtd: number;
 }

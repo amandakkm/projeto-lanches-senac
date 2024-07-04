@@ -2,16 +2,17 @@ import LoginAccordion from "../components/FormularioPagamento/DadosLogin";
 import PedidoAccordion from "../components/FormularioPagamento/DadosPedido";
 import PagamentoAccordion from "../components/FormularioPagamento/DadosPagamento";
 import { Accordion } from "react-bootstrap";
+import "../pages/Checkout.css";
+
 
 const Pagamento = () => {
   return (
     <>
-      <Accordion>
+      <Accordion className="accordion">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Meus dados</Accordion.Header>
           <Accordion.Body>
-            <LoginAccordion
-              name="Amanda Marcos"
+            <LoginAccordion name="Amanda Marcos"
               endereco="Avenida Expedicionário José Pedro Coelho, 1826 
                           - Complemento: APTO 301"
               telefone="(48) 98805-1651" />
@@ -22,8 +23,9 @@ const Pagamento = () => {
           <Accordion.Body>
             <PedidoAccordion
               lanche="X-tudo"
-              price="R$15,90"
+              price={15.50}
               total={15.95}
+              qtd={3}
               image="https://pocket.devrocket.com.br/uploads/cardapios/imagens/8-7a3bb6679b0c059a81092110952acd9921dc0677.png" />
           </Accordion.Body>
         </Accordion.Item>

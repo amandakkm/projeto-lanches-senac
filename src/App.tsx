@@ -3,17 +3,18 @@ import { Container } from "react-bootstrap"
 import Home from "./pages/Home"
 import Checkout from "./pages/Checkout"
 import { Navbar } from "./components/Navbar"
+import LoginFake from "./pages/LoginFake"
+
 
 function App() {
   return (
     <>
     <Navbar />
-    <Container className="mb-4">
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/checkout" element={<Checkout />}/>
+        <Route path="/loginFake" element={<LoginFake />} />
       </Routes>
-    </Container>
     </>
   )
 }
